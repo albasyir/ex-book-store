@@ -24,8 +24,9 @@ export const useWebStoreRequestor = async () => {
             confirmButtonText: 'got it'
           })
         }
-      }
 
+        throw Error(context.response._data.message)
+      }
     },
   })
 }
